@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Apache Cordova</title>
+</head>
+<body>
+    <div class="page light-green-200">
+        <div class="padding has-header has-footer">
+            <div class="menu light-green-200" id="myMenu">
+                <div class="list no-border">
+                    <div class="item green-900">
+                        <div class="left">
+                            <i class="icon-big ion-ios-person-outline"></i>
+                        </div>
+                        <h1>User Example</h1>
+                        <p>user@example.com</p>
+                    </div>
+                    <a class="item">
+                        <div class="left">
+                            <i class="icon ion-ios-list-outline"></i>
+                        </div>
+                        <h1>Profile</h1>
+                    </a>
+                    <a class="item">
+                        <div class="left">
+                            <i class="icon ion-android-notifications-none"></i>
+                        </div>
+                        <h1>Notifications</h1>
+                        <div class="right">
+                            <span class="text-small green-900 radius padding">6</span>
+                        </div>
+                    </a>
+                    <a class="item">
+                        <div class="left">
+                            <i class="ion-ios-gear-outline"></i>
+                        </div>
+                        <h1>Settings</h1>
+                    </a>
+                    <a class="item">
+                        <div class="left">
+                            <i class="ion-ios-help-outline"></i>
+                        </div>
+                        <h1>Help</h1>
+                    </a>
+                    <a onclick="closeMenu('myMenu')" class="item">
+                        <div class="left">
+                            <i class="icon ion-ios-close-outline"></i>
+                        </div>
+                        <h1>Close menu</h1>
+                    </a>
+                </div>                               
+                    <button class="green-900 radius full footer" onclick="backPage()">Sign out</button>
+                
+            </div>
+                <div class="header green-900">
+                    <div class="left">
+                        <button class="icon ion-navicon" onclick="openMenu('myMenu')"></button>
+                    </div>
+                    <h1 class="align-center">Profile</h1>
+                </div>
+                <div class="footer green-900 shadow tab">
+                    <button class="icon ion-ios-heart-outline active" onclick="openTab('myTabWelcome')">Welcome</button>
+                    <button class="icon ion-ios-home-outline" onclick="openTab('myTabHome')">Home</button>
+                    <button class="icon ion-ios-information-outline" onclick="openTab('myTabAbout')">About</button>
+                </div>
+                <div class="tab-content active" id="myTabWelcome">
+                    <h2 class="text-strong padding text-green-900">Welcome</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, nunc id sagittis ornare, massa metus facilisis mi, at suscipit nisl est eu dolor. Maecenas purus risus, congue at dolor et, feugiat tempus ligula. Ut feugiat ornare sapien faucibus pharetra. Nam finibus urna quis elit pulvinar venenatis at in eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed non nulla tellus. Morbi tristique tellus at augue ultricies, in rhoncus metus convallis. Nulla maximus pharetra lorem, nec aliquet ex consequat in. Nullam placerat finibus tellus eget finibus. Mauris porttitor laoreet massa, sit amet egestas enim interdum eget. Donec sodales nunc est, non egestas erat varius non.</p>
+                </div>
+                <div class="tab-content" id="myTabHome">
+                    <h2 class="text-strong padding text-green-900">Home</h2>
+                    <p>Sed turpis nibh, dapibus id magna sed, tincidunt mollis purus. Morbi et ipsum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent et placerat erat. Phasellus sit amet congue lectus, tempus eleifend orci. In eu diam auctor mi dignissim interdum. Donec dignissim viverra urna. Praesent in neque eu urna fringilla lobortis. In volutpat tincidunt dignissim. Donec eget elementum nulla, eu faucibus mi. Donec vitae iaculis ipsum. Morbi malesuada velit ipsum, vel consectetur enim tincidunt at. Aenean dui turpis, vehicula ut faucibus ac, lacinia a dolor. In hac habitasse platea dictumst. Duis bibendum erat vitae gravida suscipit. Fusce vehicula efficitur nunc, id fringilla mauris pellentesque at. </p>
+                </div>
+                <div class="tab-content" id="myTabAbout">
+                    <h2 class="text-strong padding text-green-900">About</h2>
+                    <p>Version 1.0.0</p>
+                    <p>Ut dignissim nulla diam, et venenatis risus vulputate ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vulputate pulvinar dolor eu volutpat. Sed commodo nunc in sapien ultrices, ac interdum nibh eleifend. Vivamus tincidunt orci at congue tempus. Suspendisse pulvinar magna eu nunc pharetra, sed cursus massa ornare. Sed nec lacus auctor, convallis orci eu, pellentesque magna. Cras sed nulla quis libero ullamcorper vulputate. In et blandit orci. Integer dolor nibh, euismod quis nulla eget, tempus lacinia dui. Aenean et egestas magna. </p>
+                </div>
+            </div>
+        </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
