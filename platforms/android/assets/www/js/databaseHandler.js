@@ -1,4 +1,5 @@
-﻿var databaseHandler = {
+﻿//Create the database
+var databaseHandler = {
     db: null,
     createDatabase: function () {
         this.db = window.openDatabase(

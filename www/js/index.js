@@ -18,6 +18,7 @@ function addUser() {
         }
     }
 
+//Getting login info from table
 function login() {
     var username = $("#loginUserName").val();
     var password = $("#loginPassword").val();
@@ -25,6 +26,7 @@ function login() {
     userHandler.getUser(userid)
 }
 
+//Shows which user is logged in when opening the menu
 function displayUser() {
     var nodeUser = document.getElementById('userTitle');
     nodeUser.innerHTML = ("Logged in as: " + $("#loginUserName").val());

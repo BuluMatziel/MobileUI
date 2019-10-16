@@ -9,7 +9,7 @@
                     "insert into user1(_id, username, password) values(?, ?, ?)",
                     [userid, username, password],
                     function (tx, results) {
-                        alert("Registration successful! Please login with your new username and password");
+                        alert("Registration successful! Please login with your new username and password"); 
                         document.getElementById("tabSignupButton").classList.remove('active');
                         document.getElementById("tabLoginButton").classList.add('active');
                         document.getElementById("tabSignup").classList.remove('active');
@@ -25,7 +25,7 @@
         );
     },
   
-    getUser: function (userid) {
+    getUser: function (userid) { //Fetching user info
         databaseHandler.db.transaction(
             function (tx) {
                 tx.executeSql(
@@ -33,7 +33,7 @@
                     [userid],
                     function (tx, results) {
                         if (results.rows.length === 1) {                       
-                            openPage('second')
+                            openPage('second') //Successful login opens the next page
                         } else {
                             alert("Incorrect username or password")
                         }
