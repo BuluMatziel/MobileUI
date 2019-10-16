@@ -8,6 +8,20 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
     <title>Apache Cordova</title>
     <style>
         #titleAwesome {
@@ -29,41 +43,42 @@
     <div class="space"></div>
     <div class="space"></div>
     <div class="green shadow tab">
-        <button class="icon ion-android-person active light-green-100" onclick="openTab('tabLogin')">Log in</button>
-        <button class="icon ion-android-list light-green-100" onclick="openTab('tabSignup')">Sign up</button>
+        <button class="icon ion-android-person active light-green-100" onclick="openTab('tabLogin')" id="tabLoginButton">Log in</button>
+        <button class="icon ion-android-list light-green-100" onclick="openTab('tabSignup')" id="tabSignupButton">Sign up</button>
     </div>
     <div class="tab-content active" id="tabLogin">
         <div class="list">
             <div class="item label-fixed">
                 <label class="text-grey-400">Username: </label>
-                <input class="text-grey-300 " type="text">
+                <input class="text-grey-300 " type="text" id="loginUserName">
             </div>
             <div class="item label-fixed">
                 <label class="text-grey-400">Password: </label>
-                <input class="text-grey-300" type="password">
+                <input class="text-grey-300" type="password" id="loginPassword">
             </div>
             <div class="item">
-                <button class="green-900 radius full" onclick="openPage('second')">Login user</button>
+                <button class="green-900 radius full" onclick="login()">Login user</button>
             </div>
         </div>
     </div>
     <div class="tab-content" id="tabSignup">
         <div class="list">
             <div class="item">
-                <input class="text-grey-300 placeholder-white" type="text" placeholder="Choose your user name">
+                <input class="text-grey-300 placeholder-white" type="text" placeholder="Choose your username" id="txtUserName">
             </div>
             <div class="item">
-                <input class="text-grey-300 placeholder-white" type="password" placeholder="Choose a new password">
+                <input class="text-grey-300 placeholder-white" type="password" placeholder="Choose a new password" id="txtPassword">
             </div>
             <div class="item">
-                <button class="green-900 radius full" onclick="openPage('second')">Create a new user</button>
+                <button class="green-900 radius full" onclick="addUser()">Create a new user</button>
             </div>
         </div>
     </div>
 
-
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="mobileui/mobileui.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/databaseHandler.js"></script>
+    <script type="text/javascript" src="js/userHandler.js"></script>
 </body>
 </html>
